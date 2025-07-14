@@ -19,7 +19,7 @@ A deep learning-based **Image Retrieval System** built using:
 
 ## 🎬 Demo
 
-![Image Retrieva FAISS Demo](output.gif)
+![Image-Retrieva-FAISS-Demo](output.gif)
 
 ------
 
