@@ -40,7 +40,7 @@ iface = gr.Interface(
     fn=gradio_search,
     inputs=gr.Image(type="filepath", label="Upload Query Image"),
     outputs=gr.Gallery(label="Top 5 Similar Images"),
-    title="Image-Based Retrieval with FAISS"
+    title="Image-Based Retrieval with FAISS Created by Mahdi Savoji",
 )
 
 iface.launch()
