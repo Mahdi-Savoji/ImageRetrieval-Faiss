@@ -43,7 +43,7 @@ def extract_features(image_path):
     inputs = feature_extractor(images=image, return_tensors="pt")
     
     # last_hidden_state: a tensor of shape [batch_size, sequence_length, hidden_size] — for ViT Base: [1, 197, 768].
-    # 197 = 1 CLS token + 14x14 patches = 196 tokens
+    # 1 CLS token + 14x14 patches
     outputs = model(**inputs)
     
     # token index 0 is CLS 

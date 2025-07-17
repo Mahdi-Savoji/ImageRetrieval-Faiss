@@ -16,8 +16,8 @@ image_dir = os.path.join(root_path, "images")
 
 # Load previously saved data
 features = np.load("features/image_features.npy")
-image_paths = np.load("features/image_paths.npy").tolist()  # Convert to list
-class_names = np.load("features/class_names.npy").tolist()  # Convert to list
+image_paths = np.load("features/image_paths.npy").tolist()  
+class_names = np.load("features/class_names.npy").tolist() 
 index = faiss.read_index("features/image_retrieval.index")
 
 from collections import Counter
@@ -42,7 +42,7 @@ def gradio_search(query_image):
     last_query_info['query_image'] = query_image
     last_query_info['query_feat'] = query_feat
     last_query_info['predicted_class'] = predicted_class
-    last_query_info['results'] = results   # Save results here
+    last_query_info['results'] = results 
 
     return predicted_class, result_images
 
@@ -88,10 +88,10 @@ def add_image_to_dataset():
 
 
 
-with gr.Blocks(title="Image Retrieval & Classification") as demo:
-    gr.Markdown("## 🔎 Image Retrieval and Classification System")
+with gr.Blocks(title="Image Retrieval") as demo:
+    gr.Markdown("## 🔎 Image Retrieval System")
 
-    with gr.Row(equal_height=True):  # Ensures both columns align height
+    with gr.Row(equal_height=True):
         with gr.Column(scale=1):
             image_input = gr.Image(type="filepath", label="Upload Query Image", height=400)
             search_button = gr.Button("🔍 Search Similar Images")
